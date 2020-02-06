@@ -775,11 +775,10 @@
                        (assoc-in [:hardwallet :pin :on-verified] nil))}
               (set-on-card-connected :hardwallet/get-application-info)
               (set-on-card-read :hardwallet/check-card-state)
-              (if nfc-enabled?
-                (if (= flow :import)
+              (if (= flow :import)
                   (navigation/navigate-to-cofx :keycard-recovery-start nil)
                   (navigation/navigate-to-cofx :keycard-onboarding-start nil))
-                (navigation/navigate-to-cofx :keycard-nfc-on nil)))))
+              )))
 
 (fx/defn proceed-to-login
   [{:keys [db] :as cofx}]

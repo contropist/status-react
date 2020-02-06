@@ -18,7 +18,7 @@
              platform/android?)
     (.. keycard
         nfcIsSupported
-        (then #(re-frame/dispatch [:hardwallet.callback/check-nfc-support-success %])))))
+        (then #(re-frame/dispatch [:hardwallet.callback/check-nfc-support-success true])))))
 
 (defn check-nfc-enabled []
   (log/debug "[keycard] check-nfc-enabled")
@@ -26,7 +26,7 @@
              platform/android?)
     (.. keycard
         nfcIsEnabled
-        (then #(re-frame/dispatch [:hardwallet.callback/check-nfc-enabled-success %])))))
+        (then #(re-frame/dispatch [:hardwallet.callback/check-nfc-enabled-success true])))))
 
 (defn open-nfc-settings []
   (log/debug "[keycard] open-nfc-settings")

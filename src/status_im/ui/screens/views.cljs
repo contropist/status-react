@@ -12,6 +12,7 @@
             [re-frame.core :as re-frame]
             [taoensso.timbre :as log]
             [status-im.utils.platform :as platform]
+            [ status-im.ui.screens.keycard.components.nfc :as test]
             [status-im.ui.screens.mobile-network-settings.view :as mobile-network-settings]
             [status-im.ui.screens.keycard.views :as keycard]
             [status-im.ui.screens.home.sheet.views :as home.sheet]
@@ -173,4 +174,8 @@
             [wallet/select-account]
             [signing/signing]
             [bottom-sheet]
+
+            [bottom-sheet/bottom-sheet {:content-height 350
+                                        :content test/test-sheet
+                                        :show? true}]
             [popover/popover]]]))})))

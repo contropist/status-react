@@ -29,7 +29,8 @@
    :phone-nfc-off       (js/require "./resources/images/ui/phone-nfc-off.png")
    :dapp-store          (js/require "./resources/images/ui/dapp-store.png")
    :ens-header          (js/require "./resources/images/ui/ens-header.png")
-   :new-chat-header     (js/require "./resources/images/ui/new-chat-header.png")})
+   :new-chat-header     (js/require "./resources/images/ui/new-chat-header.png")
+   :onboarding-phone (js/require "./resources/images/ui/onboarding-phone.png")})
 
 (def loaded-images (atom {}))
 
